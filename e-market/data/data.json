@@ -1,0 +1,20 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "first_name": "Herald",
+      "last_name": "Johnson",
+      "phone_number": "09087654356",
+      "dept": "Mechanical Engineering",
+      "staff_id_number": "23fg32e4"
+    },
+    {
+      "id": 2,
+      "first_name": "Dave",
+      "last_name": "Frank",
+      "phone_number": "09087654356",
+      "dept": "Chemical Engineering",
+      "staff_id_number": "a6fq45e0"
+    }
+  ]  
+}
