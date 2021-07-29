@@ -9,6 +9,7 @@ import Gadgets from './components/Gadgets';
 import Fashion from './components/Fashion';
 import Poultry from './components/Poultry';
 import ViewItem from './components/ViewItem';
+import Books from './components/Books';
 
 
 
@@ -36,6 +37,9 @@ function App() {
             </Route>
             <Route path="/fashion">
               <Fashion />
+            </Route>
+            <Route path="/book">
+              <Books />
             </Route>
             <Route path="/poultry">
               <Poultry />

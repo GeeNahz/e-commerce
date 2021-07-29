@@ -12,7 +12,7 @@ const NavBar = () => {
           <div className="dropbtn" >CATEGORY</div>
           <div className="dropdown-content" >
             <Link to="/gadget" >Accessories</Link>
-            <Link to="#" >Books</Link>
+            <Link to="/book" >Books</Link>
             <Link to="/fashion" >Fashion</Link>
           </div>
         </Link>

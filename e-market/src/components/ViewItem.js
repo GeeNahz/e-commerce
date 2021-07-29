@@ -1,6 +1,8 @@
 import UseFetch from './UseFetch';
 import img from './hdp.png';
 import { useParams } from 'react-router-dom';
+import Cards from './Cards';
+import SiteDetails from './SiteDetails';
 
 
 
