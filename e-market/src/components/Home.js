@@ -1,7 +1,8 @@
-import SiteDetails from "./SiteDetails";
+// import SiteDetails from "./SiteDetails";
 // import { Link } from "react-router-dom";
 import UseFetch from "./UseFetch";
 import img from "./hdp.png";
+import Cards from "./Cards";
 // import Cards from "./Cards";
 
 
@@ -14,8 +15,14 @@ const Home = () => {
       <div className="home-cards">
         { isPending && <h2>Loading...</h2> }
         { error && <h2>{ error }</h2> }
+        <br />
+        <br />
+        <br />
         { products && <div>
-          <SiteDetails products={ products } />
+          <Cards products={ products } />
+          <br />
+          <br />
+          <br />
           <div className="trusted">
             <h2 className="one" >Trusted By</h2>
             <img src={img} alt="img" className="five" />
@@ -25,6 +32,9 @@ const Home = () => {
             <img src={img} alt="img" className="six" />
             <div className="four" >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus molestiae doloribus iure laudantium, minus assumenda expedita quos? Natus, error odio? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse, molestiae.</div>
           </div>
+          <br />
+          <br />
+          <br />
         </div> }
       </div>
     </div>

@@ -110,10 +110,6 @@ body{
   color: #4e7ba3;
 }
 /* home grid */
-.home-cards{
-  display: grid;
-  /* grid-template-columns: repeat(4, 1fr); */
-}
 
 .home .trusted h2, p{
   margin: 0 auto;
@@ -222,6 +218,7 @@ body{
 } */
 .home{
   text-align: center;
+  viewport-fit: center;
 }
 /* button{
   margin: 0 4px;
@@ -253,11 +250,7 @@ button:hover{
 
 
 /* cards */
-.card{
-  display: flex;
-  /* grid-template-columns: repeat(4, minmax(auto, 250px));
-  gap: 10px; */
-}
+
 .cards{
   width: 100%;
   height: 100%;
@@ -375,7 +368,7 @@ footer{
   /* border: 1px solid gray; */
   background-color: #032949;
   text-align: center;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 footer .links{
   color: #fff;
@@ -394,27 +387,36 @@ footer a{
 
 
 
-
+.card{
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 2fr);
+  /* gap: 5px; */
+  row-gap: 40px;
+}
 .container{
   /* margin: 0 auto; */
-  display: flex;
-  width: 100%;
-  margin: 0 1.5rem;
+  width: 25%;
+  margin: 0 2.5rem;
   justify-content: center;
   align-items: center;
   /* background-color: lightblue; */
 }
 .mycard{
+  display: grid;
   max-height: 80vh;
   /* padding: 0 2rem; */
-  width: 20rem;
+  width: 17rem;
   border-radius: 30px;
   padding: 0rem 1rem;
   /* background-color: coral; */
   box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0 0 50px rgba(0, 0, 0, 0.2);
 }
+.mycard a{
+  text-decoration: none;
+}
 .img{
-  min-height: 35vh;
+  min-height: 170px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -422,7 +424,7 @@ footer a{
 
 }
 .img img{
-  width: 20rem;
+  width: 100%;
 }
 .circle{
   width: 15rem;
@@ -435,8 +437,12 @@ footer a{
   border-radius: 50%;
   z-index: 1;
 }
+.myinfo{
+  text-align: left;
+}
 .myinfo h1{
-  font-size: 1.6rem;
+  color: #000;
+  font-size: 1.4rem;
 }
 .myinfo h3{
   font-size: 1rem;
