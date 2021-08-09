@@ -2,7 +2,9 @@
 import img from "./hdp.png";
 import { Link } from 'react-router-dom';
 
-
+const handleClick = () => {
+  return <Link to='/purchase' />
+}
 
 const Cards = ({ products }) => {
 
@@ -30,12 +32,11 @@ const Cards = ({ products }) => {
                       `${product.description.substring(0, 25)}...`}
                   </h3>
                   <h3 className="price">Price: {product.price}</h3>
-                  {/* <div className="empty"></div> */}
                 </div>
               </Link>
               
               <div className="btns">
-                <button className="active">Buy</button>
+                <button className="active" onClick={() => (handleClick)}>Buy</button>
                 <button>Cart</button>
               </div>
             </div>
