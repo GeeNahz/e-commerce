@@ -111,6 +111,9 @@ body{
 }
 /* home grid */
 
+.home{
+  box-sizing: border-box;
+}
 .home .trusted h2, p{
   margin: 0 auto;
   padding: 10px 12px;
@@ -217,8 +220,12 @@ body{
   text-align: center;
 } */
 .home{
+  max-width: 100%;
   text-align: center;
   viewport-fit: center;
+}
+.home-cards{
+  max-width: 100%;
 }
 /* button{
   margin: 0 4px;
@@ -388,10 +395,10 @@ footer a{
 
 
 .card{
+  box-sizing: border-box;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(4, 2fr);
-  /* gap: 5px; */
+  grid-template-columns: repeat(4, 1fr);
   row-gap: 40px;
 }
 .container{
@@ -485,4 +492,14 @@ button.active{
   cursor: pointer;
   border-radius: 30px;
   font-weight: bolder;
+}
+
+
+
+
+
+@media screen and (max-width: 1400px) {
+  .card{
+    grid-template-columns: repeat(3, 1fr);
+  }
 }

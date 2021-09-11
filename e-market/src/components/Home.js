@@ -1,19 +1,28 @@
-// import SiteDetails from "./SiteDetails";
-// import { Link } from "react-router-dom";
 import UseFetch from "./UseFetch";
 import img from "./hdp.png";
 import Cards from "./Cards";
+import { useState } from 'react';
 // import Cards from "./Cards";
 
 
 const Home = () => {
 
   const { data: products, isPending, error } = UseFetch(`http://127.0.0.1:8000/api/product/`);
+  
+  // const { prod, setProd } = useState({});
+
+  // products && products.map((some) => {
+  //   let count = 0;
+  //   if (count < 4){
+  //     return setProd(some);
+  //   }
+  //   return null;
+  // })
 
   return (
     <div className="home">
       <div className="home-cards">
-        { isPending && <h2>Loading...</h2> }
+        { isPending && <h2>Please wait</h2> }
         { error && <h2>{ error }</h2> }
         <br />
         <br />

@@ -1,10 +1,10 @@
-// import Button from "./Button";
+import Button from "./Button";
 import img from "./hdp.png";
 import { Link } from 'react-router-dom';
 
-const handleClick = () => {
-  return <Link to='/purchase' />
-}
+// const handleClick = () => (
+//   <Link to="/buy">Purchase</Link>
+// )
 
 const Cards = ({ products }) => {
 
@@ -36,8 +36,15 @@ const Cards = ({ products }) => {
               </Link>
               
               <div className="btns">
-                <button className="active" onClick={() => (handleClick)}>Buy</button>
-                <button>Cart</button>
+                <Button className='active' to="/purchase" onClick={(e) => {
+                  console.log('custom event', e);
+                }}>Buy</Button>
+                <Button
+                  to='./cart'
+                  onClick={(e) => {
+                    console.log('custom event', e);
+                  }}
+                >Add to cart</Button>
               </div>
             </div>
           </div>
