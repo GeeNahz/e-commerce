@@ -13,7 +13,7 @@ const Cards = ({ products }) => {
 
       <div className="card">
 
-        {products.map((product) => (
+        { products.map((product) => (
           <div className="container" key={product.id}>
             <div className="mycard">
               <Link to={`/product/${product.id}`}>

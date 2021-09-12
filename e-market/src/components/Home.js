@@ -1,23 +1,13 @@
 import UseFetch from "./UseFetch";
 import img from "./hdp.png";
 import Cards from "./Cards";
-import { useState } from 'react';
+// import { useState } from 'react';
 // import Cards from "./Cards";
 
 
 const Home = () => {
 
   const { data: products, isPending, error } = UseFetch(`http://127.0.0.1:8000/api/product/`);
-  
-  // const { prod, setProd } = useState({});
-
-  // products && products.map((some) => {
-  //   let count = 0;
-  //   if (count < 4){
-  //     return setProd(some);
-  //   }
-  //   return null;
-  // })
 
   return (
     <div className="home">
@@ -28,7 +18,9 @@ const Home = () => {
         <br />
         <br />
         { products && <div>
-          <Cards products={ products } />
+          <div className="exibit">
+            <Cards products={ products.filter(product => product.id < 5) } />
+          </div>
           <br />
           <br />
           <br />
