@@ -20,7 +20,7 @@ body{
   margin: 0;
   align-items: center;
   justify-content: space-around;
-  box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.2), ;
+  box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.2);
 }
 .main-nav .align img{
   display: block;
@@ -65,7 +65,7 @@ body{
 .dropdown-content{
   display: none;
   position: absolute;
-  top: 39px;
+  top: 35px;
   left: 0px;
   background-color: #f1f1f1;
   min-width: 130px;
@@ -92,7 +92,7 @@ body{
 
 .wrapper ul{
   display: flex;
-  list-style-type: none;
+  list-style: none;
   padding: 0;
   text-align: center;
 }
@@ -111,8 +111,20 @@ body{
 /* home grid */
 .home{
   box-sizing: border-box;
-  margin: auto;
-  max-width: 98%;;
+  margin: auto 0;
+  max-width: 100%;
+}
+.home .trusted{
+  background-color: #f1f1f1;
+  min-width: 100%;
+  text-align: left;
+  display: grid;
+  grid-template-columns: repeat(4, 2fr);
+  grid-template-rows: repeat(2, minmax(200, auto));
+  margin: 30px auto 0px auto;
+  gap: 15px;  
+  padding: 15px;
+  justify-items: start;
 }
 .home .trusted h2, p{
   margin: 0 auto;
@@ -120,18 +132,6 @@ body{
 }
 .home .trusted p{
   margin: 0 4px;
-}
-.home .trusted{
-  background-color: #f1f1f1;
-  width: 900px;
-  text-align: left;
-  display: grid;
-  grid-template-columns: repeat(4, 2fr);
-  grid-template-rows: repeat(2, minmax(200, auto));
-  margin: 0 auto;
-  gap: 15px;  
-  padding: 15px;
-  justify-items: start;
 }
 .one{
   grid-column: 3/5;
@@ -221,21 +221,7 @@ body{
 .home-cards{
   max-width: 100%;
 }
-/* button{
-  margin: 0 4px;
-  border: none;
-  border-radius: 7px;
-  outline: none;
-  height: 5vh;
-  width: 90px;
-  color: #fff;
-  background-color: #4e7ba3;
-  transition: 200ms ease;
-}
-button:hover{
-  background-color: #305b81;
-  cursor: pointer;
-} */
+
 .info{
   padding: 0px 20px;
   text-align: left;
@@ -307,12 +293,59 @@ button:hover{
   width: 100%;
   height: 100%;
 }
+.home .hero{
+  color: #0af061;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+.home .hero .img{
+  margin: 0;
+  mix-blend-mode: multiply;
+}
+.home .hero img{
+  display: block;
+  width: 100%;
+  height: 50vh;
+  margin-bottom: 10px;
+}
+.home .hero h1{
+  position: absolute;
+  top: 3%;
+  left: 145px;
+  font-size: 100px;
+  font-family: Clarendon Blk BT;
+}
+.home .hero p.first{
+  top: 47%;
+}
+.home .hero p.second{
+  top: 55%;
+}
+.home .hero p.first, .home .hero p.second{
+  display: block;
+  color: #fff;
+  position: absolute;
+  left: 140px;
+  margin: 0;
+  font-size: 25px;
+  font-family: Clarendon Blk BT;
+}
+.popular{
+  text-align: center;
+}
+.popular h2.green{
+  font-family: Clarendon Blk BT; 
+  color: #009f3c;
+  margin-bottom: 30px;
+}
 .exibit{
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 10px;
   width: 80%;
   margin: auto;
+  box-shadow: 2px 5px 10px 3px rgba(0, 0, 0, 0.2);
 }
 .main-card{
   position: relative;
@@ -425,12 +458,11 @@ button:hover{
 
 footer{
   /* border: 1px solid gray; */
-  background-color: #032949;
+  background-color: #fff;
   text-align: center;
-  margin-top: 10px;
+  color: #009f3c;
 }
 footer .links{
-  color: #fff;
   padding: 10px;
   margin: 0 auto;
 }
@@ -438,7 +470,7 @@ footer .links p{
   display: inline;
 }
 footer a{
-  color: #fff;
+  color: #009f3c;
   text-decoration: none;
   padding: 0 1px;
   margin: 20px;
@@ -552,6 +584,7 @@ button.active{
 @media screen and (max-width: 1400px) {
   .exibit{
     width: 100%;
+    padding: 10px;
   }
 }
 
@@ -560,6 +593,7 @@ button.active{
   .exibit{
     grid-template-columns: repeat(3, 1fr);
     width: 100%;
+    padding: 10px;
   }
   .main-nav .align img{
     display: block;
@@ -571,5 +605,21 @@ button.active{
   }
   .main-nav .links{
     font-size: .8em;
+  }
+  .home .hero h1{
+  position: absolute;
+  top: 12%;
+  left: 60px;
+  font-size: 75px;
+  }
+  .home .hero p.first{
+    top: 45%;
+  }
+  .home .hero p.second{
+    top: 50%;
+  }
+  .home .hero p.first, .home .hero p.second{
+    left: 50px;
+    font-size: 23px;
   }
 }

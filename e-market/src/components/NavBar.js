@@ -23,8 +23,7 @@ const NavBar = () => {
             </div>
           </li>
           <li><Link to='/about'>ABOUT</Link></li>
-          <li><Link to='/cart'>MY CART</Link></li>
-        </ul>
+         </ul>
       </div>
       <div className="icons">
         <Link to='/cart'>
