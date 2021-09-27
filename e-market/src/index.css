@@ -7,7 +7,7 @@
 body{
   margin: 0 auto;
   max-width: 100%;
-  background-color: #cdcdcd;
+  background-color: #e1e1e1;
 }
 .main-nav{
   position: sticky;
@@ -25,6 +25,9 @@ body{
 .main-nav .align img{
   display: block;
   width: 100px;
+}
+.main-nav .links{
+  text-transform: capitalize;
 }
 .main-nav .links a, .links .dropdown{
   text-decoration: none;
@@ -115,23 +118,58 @@ body{
   max-width: 100%;
 }
 .home .trusted{
-  background-color: #f1f1f1;
+  background-color: #fff;
   min-width: 100%;
-  text-align: left;
-  display: grid;
-  grid-template-columns: repeat(4, 2fr);
-  grid-template-rows: repeat(2, minmax(200, auto));
-  margin: 30px auto 0px auto;
-  gap: 15px;  
-  padding: 15px;
-  justify-items: start;
+  text-align: center;
+  display: block;
+  margin: 30px auto;
+  padding: 30px;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
 }
-.home .trusted h2, p{
-  margin: 0 auto;
+.home .trusted .reviews{
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  text-align: left;
+  width: 100;
+}
+.home .trusted .review-card{
+  margin: 10px;
+  padding: 15px;
+  max-width: 200px;
+  border: solid 1.2px #adadad;
+  border-radius: 5px;
+  box-shadow: 0 0 5px .5px rgba(0, 0, 0, 0.2);
+}
+.home .trusted h2{
+  display: block;
+  margin: 0 auto 15px auto;
   padding: 10px 12px;
+  color: #009f3c;
+  font-family: 'Clarendon Blk BT';
+  text-transform: capitalize;
+}
+.home .trusted .head{
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  margin-bottom: 10px;
+}
+.home .trusted .head h4{
+  display: inline-block;
+  margin: 10px;
+  font-size: smaller;
+  white-space: nowrap;
+}
+.home .trusted .head img{
+  display: inline-block;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
 }
 .home .trusted p{
-  margin: 0 4px;
+  margin: 0;
+  color: #858585;
 }
 .one{
   grid-column: 3/5;
@@ -239,9 +277,10 @@ body{
 /* cards */
 
 .containers{
-  /* display: flex; */
   text-align: center;
   background-color: #fff;
+  border-radius: 5px;
+    overflow: hidden;
 }
 .containers .details{
   padding: 10px;
@@ -285,7 +324,10 @@ body{
   background: none;
   border: none;
   text-decoration: none;
-  color: #000;
+  color: #0c0335;
+}
+.containers .ca{
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.2);
 }
 
 
@@ -312,9 +354,9 @@ body{
 .home .hero h1{
   position: absolute;
   top: 3%;
-  left: 145px;
+  left: 140px;
   font-size: 100px;
-  font-family: Clarendon Blk BT;
+  font-family: 'Clarendon Blk BT';
 }
 .home .hero p.first{
   top: 47%;
@@ -329,13 +371,13 @@ body{
   left: 140px;
   margin: 0;
   font-size: 25px;
-  font-family: Clarendon Blk BT;
+  font-family: 'Clarendon Blk BT';
 }
 .popular{
   text-align: center;
 }
 .popular h2.green{
-  font-family: Clarendon Blk BT; 
+  font-family: 'Clarendon Blk BT'; 
   color: #009f3c;
   margin-bottom: 30px;
 }
@@ -345,7 +387,6 @@ body{
   gap: 10px;
   width: 80%;
   margin: auto;
-  box-shadow: 2px 5px 10px 3px rgba(0, 0, 0, 0.2);
 }
 .main-card{
   position: relative;
@@ -391,8 +432,6 @@ body{
   grid-template-columns: repeat(2, 1fr);
   align-self: center;
   justify-self: center;
-  /* position: absolute; */
-  /* margin: 0 auto; */
   bottom: 10px;
   left: 25px;
   align-items: baseline;
@@ -405,8 +444,18 @@ body{
 
 
 /* view items */
+
 .item-view{
   padding: 30px;
+}
+.item-view .box{
+  width: 900px;
+  max-width: 100%;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  background-color: #fff;
+  margin: auto;
+  border-radius: 5px;
 }
 .item-view .top{
   max-width: 850px;
@@ -414,15 +463,19 @@ body{
   display: grid;
   grid-template-columns: 40% 60%;
   grid-auto-rows: 43px;
-  /* grid-template-rows: minmax(60px, auto); */
 }
 .item-view img{
+  width: 100%;
+}
+.item-view .img{
   grid-row: 1/5;
+  padding: 10px;
 }
 .item-view .inner-grid{
   grid-row: 1/5;
   display: grid;
   align-items: center;
+  padding: 10px;
 }
 .item-view .inner-grid .name{
   grid-row: 1/2;
@@ -440,6 +493,31 @@ body{
   max-width: 850px;
   margin: 0 auto;
 }
+.item-view .middle .btn button{
+  display: flex;
+  flex-direction: right;
+  margin: 15px 0;
+  padding: 8px 5px;
+  background: none;
+  border: none;
+  outline: none;
+  background-color: #009f3c;
+  box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.2);
+  border-radius: 30px;
+  font-weight: bold;
+  width: 140px;
+  cursor: pointer;
+  color: #fff;
+  z-index: 1;
+  white-space: nowrap;
+  text-align: center;
+  text-transform: capitalize;
+  font-family: 'Verdana';
+  justify-content: center;
+}
+.item-view .middle .btn button:hover{
+  background-color: #008d36;
+}
 .item-view .middle p{
   padding: 0 10px;
   text-align: justify;
@@ -454,96 +532,98 @@ body{
   justify-items: center;
 }
 
+/* categories section */
 
+.cat h2.header{
+  color: #009f3c;
+  font-family: 'Clarendon Blk BT';
+}
+
+/* about section */
+.about{
+  display: block;
+}
+.about .abt{
+  display: flex;
+  align-items: center;
+  padding: 30px 10px;
+  max-width: 900px;
+  margin: 30px auto;
+  background-color: #fff;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+.about .abt img{
+  border-radius: 5px;
+  width: 100%;
+  height: 250px;
+}
+.about .abt .img{
+  padding: 10px;
+}
+.about .abt .details{
+  width: 500px;
+  margin-left: 10px;
+}
+.about .abt .details h2{
+  color: #009f3c;
+}
+.about .abt .details p{
+  color: #858585;
+  margin: 0;
+}
+
+
+/* footer section */
 
 footer{
-  /* border: 1px solid gray; */
   background-color: #fff;
+  color: #0c0335;
+  padding: 20px;
+  margin: auto;
+  width: 100%;
   text-align: center;
-  color: #009f3c;
 }
 footer .links{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 100%;
   padding: 10px;
-  margin: 0 auto;
+  margin: auto;
+  text-align: center;
+}
+footer .links h2{
+  display: block;
+  font-family: Verdana, sans-serif;
+}
+footer .links .location, .contact, .follow, .quick-links{
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
 }
 footer .links p{
-  display: inline;
+  line-height: 0px;
+  color: #858585;
 }
-footer a{
-  color: #009f3c;
+footer .links a{
+  display: block;
+  color: #858585;
   text-decoration: none;
   padding: 0 1px;
   margin: 20px;
-}
+  line-height: 0px;
 
-
-
-.card{
-  box-sizing: border-box;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  row-gap: 40px;
 }
-.container{
-  /* margin: 0 auto; */
-  width: 25%;
-  margin: 0 2.5rem;
-  justify-content: center;
-  align-items: center;
-  /* background-color: lightblue; */
-}
-.mycard{
-  display: grid;
-  max-height: 80vh;
-  /* padding: 0 2rem; */
-  width: 17rem;
-  border-radius: 30px;
-  padding: 0rem 1rem;
-  /* background-color: coral; */
-  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0 0 50px rgba(0, 0, 0, 0.2);
-}
-.mycard a{
+footer a{
   text-decoration: none;
 }
-.img{
-  min-height: 170px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  /* background-color: lightcoral; */
+footer p a span{
+  color: #009f3c;
+}
 
-}
-.img img{
-  width: 100%;
-}
-.circle{
-  width: 15rem;
-  height: 15rem;
-  background: linear-gradient(
-    to right, rgba(245, 70, 66, 0.75),
-    rgba(8, 83, 156, 0.75)
-  );
-  position: absolute;
-  border-radius: 50%;
-  z-index: 1;
-}
-.myinfo{
-  text-align: left;
-}
-.myinfo h1{
-  color: #000;
-  font-size: 1.4rem;
-}
-.myinfo h3{
-  font-size: 1rem;
-  padding: .5rem 0rem;
-  color: #585858;
-  font-weight: lighter;
-}
-/* .empty{
-  min-height: 2rem;
-} */
+
+/* another card section */
+
+
 .btns{
   display: flex;
   justify-content: space-between;
@@ -609,7 +689,7 @@ button.active{
   .home .hero h1{
   position: absolute;
   top: 12%;
-  left: 60px;
+  left: 50px;
   font-size: 75px;
   }
   .home .hero p.first{
@@ -621,5 +701,17 @@ button.active{
   .home .hero p.first, .home .hero p.second{
     left: 50px;
     font-size: 23px;
+  }
+  footer .links{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 10px;
+    margin: 0 auto;
+  }
+  .item-view .top{
+    grid-template-columns: 35% 65%;
+  }
+  .about .abt{
+    margin: 30px 65px;
   }
 }

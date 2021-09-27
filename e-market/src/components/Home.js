@@ -1,7 +1,7 @@
 import UseFetch from "./UseFetch";
-import img from "./hdp.png";
 import Card from "./Card";
 import hero from "./hero_img.jpg";
+import mdp from "./male-dp.jpg";
 
 
 const Home = () => {
@@ -28,9 +28,15 @@ const Home = () => {
 
       
   //   }
+  //   console.log(newArray);
 
   //   return newArray;
   // }
+
+  const shuffleArray = (arr) => {
+    const shuffle = arr.sort((a, b) => 0.5 - Math.random());
+    return shuffle;
+  }
 
 
     return (
@@ -49,7 +55,7 @@ const Home = () => {
           {isPending && <h2>Please wait</h2>}
           {error && <p>{error}</p>}
           {products && <div className="exibit">
-            {products.map((product, i) => { 
+            {shuffleArray(products).map((product, i) => { 
               return i <= 3 && <Card product={ product } key={ product.id }/>
             })}
           </div>
@@ -57,7 +63,30 @@ const Home = () => {
         </div>
 
         <div className="trusted">
-          
+          <h2>What they say about us</h2>
+          <div className="reviews">
+            <div className="review-card">
+              <div className="head">
+                <img src={ mdp } alt="dp" />
+                <h4>Bryan Noore</h4>
+              </div>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, iste! Assumenda modi maxime minus fugiat laborum, hic dolore sint voluptatum.</p>
+            </div>
+            <div className="review-card">
+              <div className="head">
+                <img src={ mdp } alt="dp" />
+                <h4>Bryan Noore</h4>
+              </div>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, iste! Assumenda modi maxime minus fugiat laborum, hic dolore sint voluptatum.</p>
+            </div>
+            <div className="review-card">
+              <div className="head">
+                <img src={ mdp } alt="dp" />
+                <h4>Bryan Noore</h4>
+              </div>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, iste! Assumenda modi maxime minus fugiat laborum, hic dolore sint voluptatum.</p>
+            </div>
+          </div>
         </div>
 
       </div>

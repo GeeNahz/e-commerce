@@ -11,10 +11,10 @@ const NavBar = () => {
       </div>
       <div className="links">
         <ul>
-          <li><Link to='/' className="home-nav" >HOME</Link></li>
+          <li><Link to='/' className="home-nav" >home</Link></li>
           <li>
             <div to='#' className="dropdown">
-              <div className="dropbtn" >CATEGORY</div>
+              <div className="dropbtn" >category</div>
               <div className="dropdown-content" >
                 <Link to="/gadget" >Accessories</Link>
                 <Link to="/book" >Books</Link>
@@ -22,7 +22,7 @@ const NavBar = () => {
               </div>
             </div>
           </li>
-          <li><Link to='/about'>ABOUT</Link></li>
+          <li><Link to='/about'>about us</Link></li>
          </ul>
       </div>
       <div className="icons">

@@ -1,7 +1,5 @@
-// import { Link } from "react-router-dom";
 import UseFetch from "./UseFetch";
-import Cards from "./Cards";
-// import SiteDetails from "./SiteDetails";
+import Card from "./Card";
 
 
 const Gadgets = () => {
@@ -10,12 +8,14 @@ const Gadgets = () => {
 
 
   return (
-    <div className="access-cat" id="page">
-      <h1> Accessories </h1>
+    <div className="access-cat cat" id="page">
+      <h2 className="header"> Accessories </h2>
       { isPending && <h2>Please wait</h2> }
       { error && <div>{ error }</div> }
-      { products && <div>
-        <Cards products={ products.filter((product) => product.category === "Accessories") } />
+      { products && <div className="exibit">
+        {products.map((product) => {
+          return product.category === "Accessories" && <Card product={ product } />
+        })}
       </div> }
     </div>
   );
