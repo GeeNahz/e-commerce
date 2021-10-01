@@ -34,7 +34,7 @@ const Footer = () => {
           <Link to="/tweet" >Ibadan</Link>
         </div>
       </div>
-      <p>copyright @ 2021 By <Link><span>Od's Web</span></Link> </p>
+      <p>copyright @ 2021 By <Link to="/some-site"><span>Od's Web</span></Link> </p>
     </footer>
   );
 }

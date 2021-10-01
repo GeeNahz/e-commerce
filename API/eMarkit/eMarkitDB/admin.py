@@ -6,5 +6,5 @@ from .models import Product
 @admin.register(Product)
 
 class AdminProduct(admin.ModelAdmin):
-  list_filter = ['name_of_product', 'category']
-  list_display = ['name_of_product', 'category']
+  list_filter = ['name', 'category']
+  list_display = ['name', 'category']

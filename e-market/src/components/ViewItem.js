@@ -1,5 +1,5 @@
 import UseFetch from './UseFetch';
-import img from './hdp.png';
+// import img from './hdp.png';
 import { useParams } from 'react-router-dom';
 import Button from './Button';
 
@@ -15,13 +15,13 @@ const ViewItem = () => {
       <div className="box">
         <div className="top">
           <div className="img">
-            <img src={ img } alt="item-img" />
+            {product && <img src={ product.image } alt="item" />}
           </div>
           {error && <p>{ error }</p>}
           {isPending && <p>Please Wait</p>}
           {product && <div className="inner-grid">
             <div className="name">
-              Name: {product.name_of_product}
+              Name: {product.name}
             </div>
             <div className="price">
               Price: { product.price }
@@ -32,7 +32,7 @@ const ViewItem = () => {
             <div className="num">
               Number Available: { product.number_avail }
             </div>
-            
+
           </div>}
         </div>
         <div className="middle">
@@ -40,11 +40,11 @@ const ViewItem = () => {
           {product && product.specification}
           <div className="btn">
             <Button
-              to='./checkout'
+              to='/cart'
               onClick={(e) => {
                 console.log('custom event', e);
               }}
-            >check out</Button>
+            >Proceed to cart</Button>
           </div>
         </div>
         <div className="bottom">

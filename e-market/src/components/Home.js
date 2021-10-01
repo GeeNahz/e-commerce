@@ -34,7 +34,7 @@ const Home = () => {
   // }
 
   const shuffleArray = (arr) => {
-    const shuffle = arr.sort((a, b) => 0.5 - Math.random());
+    const shuffle = arr.sort(() => 0.5 - Math.random());
     return shuffle;
   }
 

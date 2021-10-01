@@ -1,7 +1,6 @@
 import pork from "./pork.jpg";
 
 
-
 const About = () => {
   return (
     <div className="about" >
@@ -19,5 +18,5 @@ const About = () => {
     </div>
   );
 }
- 
+
 export default About;

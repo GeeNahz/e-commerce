@@ -1,21 +1,21 @@
 // import Button from "./Button"
-import shoe from './sneaker.png';
+// import shoe from './sneaker.png';
 import Button from "./Button";
 import { Link } from 'react-router-dom';
 
 
 const Card = ({ product }) => {
-  
-  
+
+
   return (
     <div className="gom">
       <div className="containers" >
           <div className="ca" key={ product.id }>
             <Link to={`product/${ product.id }`}>
-              <img src={shoe} alt="alt_img" />
+              <img src={ product.image } alt="product" />
               <div className="details">
-              <h2>{product.name_of_product }</h2>
-              <h3>{product.price }</h3>
+              <h3>{product.name }</h3>
+              <h4>{product.price }</h4>
               </div>
             </Link>
             <div className="btn">

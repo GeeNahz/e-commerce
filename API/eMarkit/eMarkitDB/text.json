@@ -1,0 +1,65 @@
+[
+    {
+        "id": 1,
+        "name": "Shoe",
+        "price": "1500",
+        "category": "Fashion",
+        "description": "White sneakers for men",
+        "specification": "White color. Sizes: 40 - 45",
+        "number_avail": "4"
+    },
+    {
+        "id": 2,
+        "name": "Headphone",
+        "price": "4000",
+        "category": "Accessories",
+        "description": "Beat by Dr. dre headphones, clear sound and noise cancellation",
+        "specification": "Color: white, black, red.",
+        "number_avail": "11"
+    },
+    {
+        "id": 3,
+        "name": "Harry Porter: Deathly Hallows",
+        "price": "3000",
+        "category": "Books",
+        "description": "Harry Porter series The Deathly Hallows",
+        "specification": "Nill",
+        "number_avail": "2"
+    },
+    {
+        "id": 4,
+        "name": "Wireless Mouse",
+        "price": "1200",
+        "category": "Accessories",
+        "description": "Blue office wireless mouse and track pad",
+        "specification": "Color: Blue\r\nRange: 3m\r\nSize: 0.06mx0.043x0.022",
+        "number_avail": "15"
+    },
+    {
+        "id": 5,
+        "name": "Power bank",
+        "price": "5500",
+        "category": "Accessories",
+        "description": "oraimo compact Ultra slim fast charging power bank",
+        "specification": "Battery cell: Lithium battery\r\nCapacity: 10000mAh\r\nRated Input: DC 5.0V/2A\r\nRated Output: DC 5.0V 2.1A Max\r\nDimension: 135.7x67.3x15.5mm\r\n2 x USB Fast charging",
+        "number_avail": "15"
+    },
+    {
+        "id": 6,
+        "name": "Rolex deepsea",
+        "price": "14000",
+        "category": "Accessories",
+        "description": "Rolex deepsea wirstwatch for men.",
+        "specification": "Silver",
+        "number_avail": "5"
+    },
+    {
+        "id": 7,
+        "name": "Bigotti",
+        "price": "10000",
+        "category": "Accessories",
+        "description": "Bigotti bg-1020110 wristwatch for women",
+        "specification": "Black\r\nLether",
+        "number_avail": "5"
+    }
+]

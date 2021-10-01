@@ -7,9 +7,10 @@ import Cart from './components/Cart';
 import Purchase from './components/Purchase';
 import Gadgets from './components/Gadgets';
 import Fashion from './components/Fashion';
-import Poultry from './components/Poultry';
 import ViewItem from './components/ViewItem';
 import Books from './components/Books';
+import Contact from './components/Contact';
+import Checkout from './components/Checkout';
 
 
 
@@ -41,11 +42,14 @@ function App() {
             <Route path="/book">
               <Books />
             </Route>
-            <Route path="/poultry">
-              <Poultry />
+            <Route path="/checkout">
+              <Checkout />
             </Route>
             <Route path="/product/:id">
               <ViewItem />
+            </Route>
+            <Route path="/contact">
+              <Contact />
             </Route>
           </Switch>
         </div>
