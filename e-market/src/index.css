@@ -222,6 +222,7 @@ body{
 
 
 /* sit details */
+
 .site-details{
   display: flex;
   padding: 12px;
@@ -263,6 +264,7 @@ body{
 }
 
 /* home cards */
+
 .home-cards{
   max-width: 100%;
 }
@@ -322,7 +324,6 @@ body{
 .ca img{
   width: 100%;
   height: 200px;
-  mix-blend-mode: ;
   object-fit: cover;
   display: block;
   margin-left: auto;
@@ -345,6 +346,10 @@ body{
   width: 100%;
   height: 100%;
 }
+
+
+/* hero on home page */
+
 .home .hero{
   color: #0af061;
   position: relative;
@@ -481,7 +486,6 @@ body{
 }
 .item-view .img{
   grid-row: 1/5;
-  /* padding: 1rem; */
 }
 .item-view .inner-grid{
   grid-row: 1/5;
@@ -668,7 +672,7 @@ body{
 
 /* Checkout section */
 
-.checkout{
+.cart{
   display: flex;
   align-items: center;
   justify-content: center;
@@ -676,12 +680,12 @@ body{
   margin: 30px;
   flex-direction: column;
 }
-.checkout .general{
+.cart .product-items .general{
   box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
   background-color: #fff;
   border-radius: 5px;
 }
-.checkout .items{
+.cart .product-items .items{
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -689,16 +693,17 @@ body{
   margin: 0px auto 15px auto;
   padding: 0 70px;
 }
-.checkout .verify{
+.cart .product-items .verify{
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 80%;
-  padding: 0;
+  padding: 1rem 0;
 }
-.checkout .verify .headers{
+.cart .product-items .verify .headers{
   display: grid;
   grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: minmax(40px, 100px);
   align-items: center;
   text-align: center;
   width: 80%;
@@ -708,13 +713,20 @@ body{
   padding: 0 auto;
   border-bottom: 1px solid #858585;
 }
-.checkout .verify .items-list{
+.cart .product-items .verify .items-list{
   line-height: 30px;
   height: 70px;
-  margin: 5px;
+  padding: 5px;
   color: #585858;
 }
-.checkout .items button.btns{
+.cart .product-items .verify .headers{
+  height: 7rem;
+}
+.cart .verify .items-list img{
+  width: 100%;
+  height: 100%;
+}
+.cart .product-items .items button.btns{
   display: flex;
   margin: 1.5rem 0;
   padding: .8rem .5rem;
@@ -735,10 +747,10 @@ body{
   font-family: 'Verdana';
   justify-content: center;
 }
-.checkout .items button.btns:hover{
+.cart .product-items .items button.btns:hover{
   opacity: 80%;
 }
-.checkout .verify .items-list input{
+.cart .product-items .verify .items-list input{
   width: 4rem;
 }
 
@@ -750,6 +762,8 @@ footer{
   background-color: #fff;
   color: #0c0335;
   padding: 2rem;
+  /* position: fixed; */
+  bottom: 0;
   margin: auto;
   width: 100%;
   text-align: center;

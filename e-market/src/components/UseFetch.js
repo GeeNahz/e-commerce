@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 
 
-const UseFetch = (url) => {
+const useFetch = (url) => {
 
   const [data, setData] = useState(null);
   const [isPending, setIsPending] = useState(true);
@@ -15,6 +15,7 @@ const UseFetch = (url) => {
     setTimeout(() => {
 
       fetch(url, {
+        signal:abortCont.signal,
         'method': 'GET'
       }).then(res => {
         console.log(res);
@@ -38,10 +39,10 @@ const UseFetch = (url) => {
     }, 500);
 
     return () => abortCont.abort();
-    
+
   }, [url]);
 
   return { data, isPending, error }
 }
 
-export default UseFetch;
+export default useFetch;

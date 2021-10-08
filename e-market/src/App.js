@@ -27,9 +27,9 @@ function App() {
             <Route path="/about">
               <About />
             </Route>
-            <Route path="/cart">
-              <Cart />
-            </Route>
+
+            <Route exact path="/product/cart/:id" component={Cart} />
+              
             <Route path="/purchase">
               <Purchase />
             </Route>
@@ -45,7 +45,7 @@ function App() {
             <Route path="/checkout">
               <Checkout />
             </Route>
-            <Route path="/product/:id">
+            <Route exact path="/product/:id">
               <ViewItem />
             </Route>
             <Route path="/contact">

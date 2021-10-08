@@ -1,10 +1,10 @@
 import Card from "./Card";
-import UseFetch from "./UseFetch";
+import useFetch from "./useFetch";
 
 
 const Books = () => {
 
-  const { data: products, isPending, error } = UseFetch(`http://127.0.0.1:8000/api/product/`);
+  const { data: products, isPending, error } = useFetch(`http://127.0.0.1:8000/api/product/`);
 
   return(
     <div className="books_container cat" id='page'>

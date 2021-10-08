@@ -1,11 +1,11 @@
-import UseFetch from "./UseFetch";
+import useFetch from "./useFetch";
 import Card from "./Card";
 
 
 
 const Fashion = () => {
 
-  const { data: products, isPending, error } = UseFetch(`http://127.0.0.1:8000/api/product/`);
+  const { data: products, isPending, error } = useFetch(`http://127.0.0.1:8000/api/product/`);
 
   return (
     <div className="fashion cat" id="page">
@@ -20,5 +20,5 @@ const Fashion = () => {
     </div>
   );
 }
- 
+
 export default Fashion;

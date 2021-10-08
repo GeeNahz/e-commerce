@@ -1,10 +1,10 @@
-import UseFetch from "./UseFetch";
+import useFetch from "./useFetch";
 import Card from "./Card";
 
 
 const Gadgets = () => {
 
-  const {data: products, isPending, error } = UseFetch(`http://127.0.0.1:8000/api/product/`);
+  const {data: products, isPending, error } = useFetch(`http://127.0.0.1:8000/api/product/`);
 
 
   return (
@@ -20,5 +20,5 @@ const Gadgets = () => {
     </div>
   );
 }
- 
+
 export default Gadgets;

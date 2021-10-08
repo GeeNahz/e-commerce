@@ -1,5 +1,3 @@
-// import Button from "./Button"
-// import shoe from './sneaker.png';
 import Button from "./Button";
 import { Link } from 'react-router-dom';
 
@@ -20,7 +18,7 @@ const Card = ({ product }) => {
             </Link>
             <div className="btn">
               <Button
-                to='./cart'
+                to={`product/${ product.id }`}
                 onClick={(e) => {
                   console.log('custom event', e);
                 }}

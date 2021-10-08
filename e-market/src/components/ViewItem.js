@@ -1,6 +1,5 @@
-import UseFetch from './UseFetch';
-// import img from './hdp.png';
-import { useParams } from 'react-router-dom';
+import useFetch from './useFetch';
+import { Link, useParams } from 'react-router-dom';
 import Button from './Button';
 
 
@@ -8,7 +7,7 @@ import Button from './Button';
 const ViewItem = () => {
 
   const { id } = useParams();
-  const { data: product, isPending, error } = UseFetch(`http://127.0.0.1:8000/api/product/${ id }`);
+  const { data: product, isPending, error } = useFetch(`http://127.0.0.1:8000/api/product/${ id }`);
 
   return(
     <div className="item-view" id="page views">
@@ -40,12 +39,13 @@ const ViewItem = () => {
           {product && product.specification}
           <div className="btn">
             <Button
-              to='/cart'
+              to={`cart/${ id }`}
               onClick={(e) => {
                 console.log('custom event', e);
               }}
-            >Proceed to cart</Button>
+            >Add to Cart</Button>
           </div>
+          
         </div>
         <div className="bottom">
           <div>card</div>

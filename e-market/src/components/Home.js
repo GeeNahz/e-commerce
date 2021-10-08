@@ -1,4 +1,4 @@
-import UseFetch from "./UseFetch";
+import useFetch from "./useFetch";
 import Card from "./Card";
 import hero from "./hero_img.jpg";
 import mdp from "./male-dp.jpg";
@@ -6,13 +6,13 @@ import mdp from "./male-dp.jpg";
 
 const Home = () => {
 
-  const { data: products, isPending, error } = UseFetch(`http://127.0.0.1:8000/api/product/`);
-  
+  const { data: products, isPending, error } = useFetch(`http://127.0.0.1:8000/api/product/`);
+
 
   // const shuffleArray = (arr) => {
   //   let arrSize = arr.length;
   //   let newArray = [];
-    
+
   //   // loop through the length of the main array
   //   for (let index = 0; index < arrSize; index++) {
   //     let arrLength = arr.length;
@@ -26,7 +26,7 @@ const Home = () => {
   //     // remove it from the previous array
   //     arr.splice(randNum, 1);
 
-      
+
   //   }
   //   console.log(newArray);
 
@@ -40,7 +40,7 @@ const Home = () => {
 
 
     return (
-      <div className="home" >
+      <div className="home" id="page">
         <div className="hero">
           <div className="img">
             <img src={hero} alt="hero-img" />
@@ -55,7 +55,7 @@ const Home = () => {
           {isPending && <h2>Please wait</h2>}
           {error && <p>{error}</p>}
           {products && <div className="exibit">
-            {shuffleArray(products).map((product, i) => { 
+            {shuffleArray(products).map((product, i) => {
               return i <= 3 && <Card product={ product } key={ product.id }/>
             })}
           </div>
@@ -94,5 +94,5 @@ const Home = () => {
     );
   }
 
- 
+
 export default Home;
