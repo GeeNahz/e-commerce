@@ -28,7 +28,7 @@ function App() {
               <About />
             </Route>
 
-            <Route exact path="/product/cart/:id" component={Cart} />
+            <Route exact path="/product/cart/" component={Cart} />
               
             <Route path="/purchase">
               <Purchase />

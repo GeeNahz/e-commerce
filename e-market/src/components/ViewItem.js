@@ -1,5 +1,5 @@
 import useFetch from './useFetch';
-import { Link, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import Button from './Button';
 
 
@@ -39,7 +39,7 @@ const ViewItem = () => {
           {product && product.specification}
           <div className="btn">
             <Button
-              to={`cart/${ id }`}
+              to={`cart/`}
               onClick={(e) => {
                 console.log('custom event', e);
               }}

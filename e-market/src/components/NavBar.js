@@ -51,7 +51,7 @@ const NavBar = () => {
          </ul>
       </div>
       <div className="icons">
-        <Link to='/cart'>
+        <Link to='product/cart/'>
           <img src={cart} alt="cart-icon" />
         </Link>
         <Link to="./purchase">

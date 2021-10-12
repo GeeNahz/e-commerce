@@ -1,6 +1,6 @@
 import Button from "./Button";
 import img from "./4-300x300.jpg"
-import { useParams } from 'react-router-dom';
+// import { useParams } from 'react-router-dom';
 import useFetch from "./useFetch";
 
 
@@ -8,35 +8,10 @@ import useFetch from "./useFetch";
 
 const Cart = () => {
 
-  const { id } = useParams();
-  const { data: product, isPending, error } = useFetch(`http://127.0.0.1:8000/api/product/${id}`);
+  // const { id } = useParams();
+  const { data: items, isPending, error } = useFetch(`http://127.0.0.1:8000/api/orderitem/`);
 
-
-  const orderItems = [
-    {
-        name: 'shirt',
-        price: '230',
-        quantity: '1'
-    },
-    {
-        name: 'Headphone',
-        price: '120',
-        quantity: '2'
-    },
-    {
-        name: 'Short',
-        price: '123',
-        quantity: '1'
-    }
-  ]
   const empty = "";
-  const items = "";
-  const total = "";
-  // const name = "Short";
-  // const [qntty, setQntty] = useState();
-  // const price = "1234";
-  // const Total = parseInt(qntty) * parseInt(price);
-
 
   return (
 
@@ -44,11 +19,11 @@ const Cart = () => {
 
       {isPending && <div>Pending</div>}
       {error && <div>{ error }</div>}
-      {product && <div className="product-items">
+      {items && <div className="product-items">
         
         <div className="items general">
-          <h4>No. of Items: {items}</h4>
-          <h4>Total: {total}</h4>
+          <h4>No. of Items: {"items"}</h4>
+          <h4>Total: {"total"}</h4>
           <Button
             className="btns"
             to='/checkout'
@@ -67,13 +42,14 @@ const Cart = () => {
             <h4>Total</h4>
           </header>
 
-          {orderItems.map((orderItem) => (
-            <section key={ orderItem.name } className="items-list headers">
-            <img src={img} alt="prod-img" />
-            <p>{ orderItem.name }</p>
-            <p>{ orderItem.price }</p>
-            <p><input type="number" name="qntty" value={ orderItem.quantity } /></p>
-            <p>{ "Total" }</p>
+          {items.map((item) => (
+            <section key={ item.id } className="items-list headers">
+              {/* <img src={ item.the_image } alt="prod-img" /> */}
+              <img src={ item.the_image } alt="prod-img" />
+              <p>{ item.the_product_name }</p>
+              <p>{item.the_product_price }</p>
+              <p><input type="number" name="qntty" value={ item.quantity } /></p>
+              <p>{ item.the_total }</p>
             </section>
           ))}
         </div>
