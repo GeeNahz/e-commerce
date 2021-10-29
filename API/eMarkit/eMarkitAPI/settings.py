@@ -27,6 +27,41 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+# Allow cookies to be included in cross-site requests
+CORS_ALLOW_CREDENTIALS = True
+
+SESSION_COOKIE_SAMESITE = None
+
+# CORS whitelist area
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",
+]
+# includes trusted origin site for CSRF whitelists
+CSRF_TRUSTED_ORIGINS = [
+    "http://localhost:3000",
+]
+# Allow certain parameters to be sent in the headers
+CORS_ALLOW_HEADERS = [
+    "accept",
+    "accept-encoding",
+    "authorization",
+    "content-type",
+    "dnt",
+    "origin",
+    "user-agent",
+    "x-csrftoken",
+    "x-requested-with",
+]
+
+
+CSRF_REPLACE_HTTPS_REFERER: True
+
+CSRF_USE_SESSIONS = False
+
+CSRF_COOKIE_HTTPONLY = False
+
+CSRF_COOKIE_SECURE = True
+
 
 # Application definition
 
@@ -38,25 +73,23 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'eMarkitDB',
+    'corsheaders',
     'rest_framework',
     'rest_framework.authtoken',
-    'corsheaders',
 ]
 
 MIDDLEWARE = [
-    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",
-]
+
 
 ROOT_URLCONF = 'eMarkitAPI.urls'
 

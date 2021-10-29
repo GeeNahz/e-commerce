@@ -56,7 +56,7 @@ const Home = () => {
           {error && <p>{error}</p>}
           {products && <div className="exibit">
             {shuffleArray(products).map((product, i) => {
-              return i <= 3 && <Card product={ product } key={ product.id }/>
+              return i <= 3 && <Card product={ product } key={ product.id } />
             })}
           </div>
           }

@@ -1,5 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.http import JsonResponse
+import json
 
 # Create your models here.
 
@@ -47,33 +49,24 @@ class Order(models.Model):
     return str(self.id)
 
 
-  # @property
-  # def get_cart_items(self):
-  #   orderitems = self.OrderItem.objects.all()
-  #   total = sum([item.get_total for item in orderitems])
-  #   return total
+  @property
+  def get_cart_items(self):
+    orderitems = self.orderitem_set.all()
+    total = sum([item.quantity for item in orderitems])
+    return total
 
 
-  # @property
-  # def get_cart_items(self):
-  #   orderitems = OrderItem.object.all()
-  #   # total = sum([orderitems.quantity for item in orderitems])
-  #   total = self.orderitems.quantity
-  #   # total = "Some texts here"
-  #   return total
-
-
-  # @property
-  # def get_cart_total(self):
-  #   orderitems = self.orderitem_set.all()
-  #   total = sum(item.get_total for item in orderitems)
-  #   return total
+  @property
+  def get_cart_total(self):
+    orderitems = self.orderitem_set.all()
+    total = sum(item.get_total for item in orderitems)
+    return total
   
   
 
 
 class OrderItem(models.Model):
-  product = models.ForeignKey(Product, on_delete=models.SET_NULL, null=True)
+  product = models.ForeignKey(Product, on_delete=models.SET_NULL, null=True, related_name='orderitem')
   order = models.ForeignKey(Order, on_delete=models.SET_NULL, null=True)
   quantity = models.IntegerField(default=0, null=True, blank=True)
   date_added = models.DateTimeField(auto_now_add=True)
@@ -103,8 +96,6 @@ class OrderItem(models.Model):
   def get_cart_items(self):
     for total in range(self.quantity):
       total+=total
-    # orderitems = self._set.all()
-    # total = sum([self.quantity for item in orderitems])
     return total
 
     
@@ -122,4 +113,6 @@ class ShippingAddress(models.Model):
 
   def __str__(self):
     return self.address
+
+
 

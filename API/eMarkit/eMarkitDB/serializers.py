@@ -20,7 +20,8 @@ class CustomerSerializer(serializers.ModelSerializer):
 
 
 class OrderSerializer(serializers.ModelSerializer):
-  # cart_items_total = serializers.ReadOnlyField(source='get_cart_items')
+  cart_total_price = serializers.ReadOnlyField(source='get_cart_total')
+  cart_total_items = serializers.ReadOnlyField(source='get_cart_items')
 
   class Meta:
     model = Order
